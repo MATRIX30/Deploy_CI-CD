@@ -1,4 +1,4 @@
-# this is the main config 
+# this is the main config file
 sudo: required
 
 services:
