@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before-install:
+  - docker build -t palma/deploy_ci-cd -f /frontend/Dockerfile.dev
+
+script:
+  - docker run palma/deploy_ci-cd npm run test -- --coverage
